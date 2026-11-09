@@ -27,6 +27,11 @@ jobs:
       - name: Buat folder platform Android
         run: flutter create --platforms=android --project-name music_player_app .
 
+      - name: Update versi Kotlin
+        run: |
+          sed -i 's/id "org.jetbrains.kotlin.android" version "[^"]*"/id "org.jetbrains.kotlin.android" version "1.9.24"/' android/settings.gradle
+          cat android/settings.gradle
+
       - name: Install dependencies
         run: flutter pub get
 
