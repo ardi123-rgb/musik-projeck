@@ -19,7 +19,7 @@ jobs:
           channel: 'stable'
 
       - name: Buat folder platform Android
-        run: flutter create --platforms=android .
+        run: flutter create --platforms=android --project-name music_player_app .
 
       - name: Install dependencies
         run: flutter pub get
